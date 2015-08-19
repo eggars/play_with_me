@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>PlayWithMe</title>
+  <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+    <div class="before_yield" style="height:100px;background-color:yellowgreen;">
+      <%= yield :before_yield %>
+    </div>
+
+    <div class="yield" style="height:100px;background-color:deepskyblue;">
+      <%= yield %>
+    </div>
+    
+    <div class="after yield" style="height:100px;background-color:red;">
+      <%= yield :after_yield %>
+    </div>
+</body>
+</html>
